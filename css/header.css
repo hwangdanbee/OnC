@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/* header */
+#header{ 
+    position: fixed; top: 0; left: 0; z-index: 5000; /* 높게 작성 */
+    width: 100%; min-width: 1180px; height: 80px;
+    background-color: #333;
+}
+#header .innerWrap{
+    display: flex; /* 자손요소를 수평 나열 처리 */
+    height: 100%;
+    justify-content: space-between; /* 첫번째와 마지막 양쪽 끝에 붙임 */
+}
+#header h1{
+    width: 180px; height: 100%; padding: 30px 0;
+}
+#header h1 a{
+    display: block; width: 100%; height: 100%; /* 부모영역 상속 */
+}
+#header h1 img{ height: 100%; }
+
+
+/* gnb */
+#header .gnb > ul{
+    height: 80px; display: flex;
+}
+#header .gnb > ul > li{ /* 하위메뉴에도 li태그있기 때문에 자손 선택 방식 사용 */
+    position: relative; /* 하위메뉴 앱솔루트 기준을 현재 요소로 변경 */
+    width: 115px; height: 100%;
+}
+#header .gnb .mainNav{
+    display: block; width: 100%; height: 100%;
+    font-size: 18px; color: #fff; font-weight: 500; 
+    text-align: center; line-height: 80px;
+}
+#header .gnb li:hover .mainNav{ /* 메인메뉴와 하위메뉴 모두에 마우스 올렸을 때 효과 처리하기 위해 사용 */
+    color: #ff9a3c; border-bottom: 3px solid #ff9a3c;
+}
+
+/* 메인메뉴 활성화 */
+#header .gnb .mainNav.active{
+    color: #ff9a3c; border-bottom: 3px solid #ff9a3c;
+}
+
+
+#header .gnb .subNav{
+    position: absolute; /* 앱솔루트의 기본 기준 : body */
+    left: 0; top: 80px; z-index: 5500; /* 메인이미지 위에 올라오게 높게 설정 */
+
+    width: 100%; height: 0;
+    overflow: hidden;
+    background-color: #fff; 
+    line-height: 40px; text-align: center;
+
+    transition: 0.3s;
+}
+#header .gnb .subNav a{ color: #333; font-size: 16px; }
+#header .gnb .subNav a:hover{ color: #0957c3; font-weight: 700; }
+
+/* 서브메뉴 활성 */
+#header .gnb .subNav.active{ padding: 10px 0; }
+#header .gnb li:nth-child(1) .subNav.active{ height: 225px; }
+#header .gnb li:nth-child(2) .subNav.active{ height: 225px; }
+#header .gnb li:nth-child(3) .subNav.active{ height: 143px; }
+#header .gnb li:nth-child(4) .subNav.active{ height: 143px; }
+#header .gnb li:nth-child(5) .subNav.active{ height: 184px; }
+
+
+
+
+
+
+/* topNav */
+#header .topNav{
+    display: flex; height: 100%; align-items: center; /* 글자 세로 정렬 */
+}
+#header .topNav li:last-child{ margin-left: 30px; }
+#header .topNav li:last-child::before{
+    position: relative; left: -15px; top: -3px;
+    content: '|'; color: #9e9e9e; font-size: 8px;
+}
+#header .topNav a{ color: #9e9e9e; }

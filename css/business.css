@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+
+#business{
+    width: 100%; min-width: 1180px; 
+    padding: 120px 0; background-color: #f4f9ff;
+}
+#business h2{ position: relative; margin-bottom: 60px; }
+#business h2::after{
+    content: '';
+    position: absolute; bottom: 8px; right: 0;
+    width: 950px; height: 2px;
+    background-color: #0957c3;
+}
+#business .innerWrap{ position: relative; }
+#business .more{
+    position: absolute; top: 0; right: 0;
+    font-size: 18px; color: #0957c3; font-weight: 700;
+}
+#business .more::after{
+    position: relative; top: 5px;
+    display: inline-block; width: 48px; height: 24px; margin-left: 10px;
+    background-image: url(../images/main/more_btn_sprite_02.png);
+    background-repeat: no-repeat; background-position: -48px 0;
+    content: '';
+}
+#business .btn{ 
+    display: flex; margin-bottom: 20px;
+}
+#business .btn li{ margin-right: 35px; }
+#business .btn a{
+    font-size: 22px; font-weight: 500; color: #9fb5d2;
+    padding-bottom: 5px;
+}
+#business .btn a.active{
+    color: #0957c3; border-bottom: 2px solid #0957c3;
+}
+#business .contentsWrap > div{
+    display: none; /* 처음엔 안보이게 처리 */
+    width: 100%; height: 330px;
+}
+#business .contentsWrap figure{
+    width: 100%; height: 100%; display: flex;
+}
+#business .contentsWrap img{
+    display: block; width: 50%; height: 100%;
+    object-fit: cover;
+}
+#business .contentsWrap figcaption{
+    width: 50%; height: 100%; padding: 50px;
+    background-color: #0957c3;
+}
+#business .contentsWrap figcaption > *{ color: #fff; }
+#business .contentsWrap figcaption > h3{
+    width: 100%; height: 50px; font-size: 22px;
+}
+#business .contentsWrap figcaption > p{
+    width: 100%; height: 90px; margin-bottom: 40px; 
+    font-size: 16px; line-height: 30px;
+}
+#business .contentsWrap figcaption > a{
+    position: relative;
+    display: block; width: 170px; height: 50px;
+    border: 1px solid #fff; padding: 0 19px; line-height: 48px;
+    font-size: 18px; font-weight: 500;
+}
+#business .contentsWrap figcaption > a::after{
+    content: ''; position: absolute; top: 13px;
+    display: inline-block; width: 56px; height: 24px;
+    background-image: url(../images/main/more_btn_sprite.png);
+    background-position: -56px 0;
+}

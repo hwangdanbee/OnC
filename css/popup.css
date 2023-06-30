@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/* popup */
+body{ overflow: hidden; } /* 처음에 팝업이 보이기 때문에 스크롤바가 안보이게 처리 */
+#popup{
+    position: fixed; top: 0; left: 0; z-index: 30000; /* 페이지의 맨위에 오게 처리 */
+    width: 100%; min-width: 1180px; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#popup .popupWrap{
+    position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+    width: 440px; height: 700px; margin: auto;
+    border-radius: 5px; overflow: hidden;
+    background-color: #fff;
+}
+#popup .popupBg{
+    display: block; width: 440px; height: 250px;
+}
+#popup .popupText{
+    width: 100%; height: 370px; padding: 30px;
+}
+#popup h3{
+    width: 100%; height: 35px;
+    font-family: 'GmarketSans'; font-size: 20px; color: #333;
+}
+#popup p{
+    width: 100%; margin-bottom: 30px;
+    line-height: 1.5; font-size: 15px; text-align: justify; 
+    word-break: keep-all; /* 단어 잘리지 않게 처리 */
+}
+#popup .mainColor{ color: #0957c3; font-size: 15px; }
+#popup .popupMobile{
+    position: relative;
+    padding-top: 30px; border-top: 1px solid #ccc;
+}
+#popup .popupMobile img{
+    position: absolute; top: 30px; right: 0;
+    width: 100px;
+}
+#popup ul{
+    position: absolute; left: 0; bottom: 0;
+    width: 100%; height: 60px; border-top: 1px solid #ccc;
+    display: flex;
+}
+#popup li{
+    flex: 1; height: 100%;
+}
+#popup li:first-child{ border-right: 1px solid #ccc; }
+#popup li a{
+    display: block; width: 100%; height: 100%;
+    text-align: center; line-height: 59px; font-size: 16px;
+}

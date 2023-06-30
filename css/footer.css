@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+
+/* footer */
+#footer{
+    width: 100%; min-width: 1180px; height: 160px; padding: 45px 0;
+    background-color: #333;
+}
+#footer .innerWrap{
+    display: flex; /* 자손요소 수평 나열 처리 */
+    justify-content: space-between; /* 첫번째와 마지막 양쪽 끝 붙이고 균등 배분 */
+    align-items: center; /* 자손요소를 세로 가운데 정렬 */
+}
+#footer .fNav{
+    display: flex; /* 리스트를 수평나열 처리 */
+    height: 23px; line-height: 23px;
+}
+#footer .fNav li{ margin-right: 30px; }
+#footer .fNav li::after{
+    position: relative; top: -3px; left: 15px;
+    content: '|'; font-size: 8px; color: #9e9e9e;
+}
+#footer .fNav li:last-child::after{ display: none; } /* 마지막 선 안보이게 처리 */
+#footer .fNav a{ color: #9e9e9e; }
+#footer .information{
+    display: flex; height: 23px; line-height: 23px;
+}
+#footer .information li{ margin-right: 30px; color: #9e9e9e; }
+#footer .information li:last-child{ margin-right: 0; } /* 마지막 요소 여백 제거 */
+#footer p{ height: 23px; line-height: 23px; color: #9e9e9e; }
+
+#footer .snsNav{ display: flex; }
+#footer .snsNav li{ margin-right: 16px; }
+#footer .snsNav li:last-child{ margin-right: 0; } /* 마지막 요소는 여백 제거 */
+#footer .snsNav a{
+    display: block; width: 40px; height: 40px;
+    background-image: url(../images/common/sns_icon_sprite.png);
+    background-repeat: no-repeat;
+    text-indent: -999em; /* 요소 자체는 제자리에 있고 글자만 화면밖으로 빼기 */
+}
+#footer .snsNav li:nth-child(1) a{ background-position: 0 0; }
+#footer .snsNav li:nth-child(2) a{ background-position: -40px 0; }
+#footer .snsNav li:nth-child(3) a{ background-position: -80px 0; }
+
+
+/* scrollTop */
+/* html{ scroll-behavior: smooth; } */
+#scrollTop{
+    display: none; /* 처음에 안보이게 처리 */
+    position: fixed; bottom: 185px; right: calc(50% - 680px); z-index: 6000;
+    transform: rotate(-45deg);
+}
+#scrollTop a{
+    display: block;
+    width: 50px; height: 50px;
+    background-image: url(../images/common/scrolltop_icon.png);
+    background-repeat: no-repeat; background-position: center;
+    background-color: #0957c3;
+    text-indent: -999em; /* 글자만 영역밖으로 처리 */
+}

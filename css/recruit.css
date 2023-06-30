@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+/* recruit */
+#recruit{
+    display: flex; /* 자손요소들을 수평나열 처리 */
+    justify-content: center; /* 가로 가운데 */
+    align-items: center;
+    width: 100%; min-width: 1180px; height: 250px;
+    background-image: url(../images/main/recruit_bg.jpg);
+    background-repeat: no-repeat; background-size: cover;
+    background-position: center;
+}
+#recruit h2{
+    margin-right: 85px; line-height: 60px;
+}
+#recruit p{
+    margin-right: 85px;
+    font-size: 20px; line-height: 30px;
+}
+#recruit a{
+    width: 255px; height: 50px; padding: 0 30px; /* 앞상하 뒷좌우 */
+    background-color: #0957c3;
+    font-size: 18px; color: #fff; font-weight: 700; line-height: 50px;
+}
+#recruit a::after{
+    position: relative; left: 10px; top: 5px;
+    display: inline-block; width: 56px; height: 24px;
+    background-image: url(../images/main/more_btn_sprite.png);
+    background-position: -56px 0;
+    content: '';
+}

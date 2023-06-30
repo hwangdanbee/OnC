@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/* cs */
+#cs{ 
+    width: 100%; min-width: 1180px; height: 670px; 
+    display: flex; /* 자손요소를 수평나열 처리 */
+}
+
+/* cs - textWrap공통처리 */
+#cs .textWrap{
+    display: flex; justify-content: space-between;
+    width: 100%; height: 90px;
+}
+#cs .textWrap .direct{
+    width: 320px; height: 40px;
+    border-bottom: 2px solid #fff;
+    text-align: right; /* 자손인 inline요소를 오른쪽으로 보냄 */
+}
+#cs .textWrap a{
+    position: relative;
+    padding-right: 55px;
+    color: #fff; font-size: 18px; font-weight: 700; line-height: 35px;
+}
+#cs .textWrap a::after{
+    position: absolute; top: 2px; right: 0;
+    width: 48px; height: 32px; margin-left: 5px;
+    background-image: url(../images/main/more_btn_sprite_02.png);
+    background-repeat: no-repeat;
+    content: '';
+}
+
+
+.notice{
+    width: 50%; min-width: 590px; height: 100%; padding: 120px 0;
+    background-color: #0957c3;
+}
+.noticeWrap{
+    float: right; /* 부모영역의 오른쪽에 붙임 */
+    width: 590px; height: 100%; padding-right: 50px;
+}
+.notice h2{ color: #fff; }
+.notice ul{ width: 100%; height: 340px; }
+.notice li{ 
+    width: 100%; height: 20%; /* 5등분처리 */
+    border-bottom: 1px solid #66a6ff;
+    line-height: 67px;
+}
+.notice li a{
+    float: left; /* 부모영역의 왼쪽에 붙임 */
+    width: 370px; height: 100%; overflow: hidden;
+    color: #fff; font-weight: 500; font-size: 18px;
+    white-space: nowrap; text-overflow: ellipsis;
+}
+.notice li .date{
+    float: right; /* 부모영역의 오른쪽에 붙임 */
+    color: #66a6ff;
+}
+.notice li .date::after{
+    position: relative; top: 3px;
+    margin-left: 30px;
+    content: url(../images/main/notice_icon.png);
+}
+
+.counseling{
+    width: 50%; min-width: 590px; height: 100%; padding: 120px 0;
+    background-color: #edf4ff;
+}
+.counselingWrap{
+    width: 590px; height: 100%; padding-left: 50px;
+}
+#cs .counseling .textWrap .direct{ border-color: #0957c3; }
+#cs .counseling .textWrap a{ color: #0957c3; }
+#cs .counseling .textWrap a::after{ background-position: -48px 0; }
+.counseling form{ width: 100%; height: 340px; }
+.counseling table{ width: 100%; } 
+.counseling th{ 
+    width: 75px; height: 50px; 
+    text-align: left; /* 기본값이 center여서 변경 */
+}
+.counseling th.third{ /* th태그 중 클래스가 third인 것을 선택 */
+    width: 105px; padding-left: 30px;
+}
+.counseling th label{ font-size: 16px; font-weight: 700; color: #333; }
+.counseling .box01{
+    width: 180px; height: 40px;
+    border: 1px solid #ccc; padding: 10px;
+}
+#counselingSubstance{
+    width: 465px; height: 130px;
+    border: 1px solid #ccc; padding: 10px;
+    resize: none; /* 사용자가 크기를 못바꾸게 막기 */
+}
+.counseling .textArea{ height: 140px; padding-top: 5px; }
+.counseling th.textArea{ 
+    padding-top: 15px;
+    vertical-align: top; /* 셀태그만 수직정렬 처리 가능 */
+} 
+.counseling .chk{ height: 50px; text-align: center; }
+#counselingChk{ position: relative; top: 2px; }
+.counseling .last{ 
+    height: 52px; 
+    vertical-align: bottom; /* th, td태그는 수직정렬 가능 */
+    text-align: center; /* 인라인요소를 가로 가운데 정렬  */
+}
+.counseling button{
+    position: relative; /* 화살표 앱솔루트 기준을 현재 요소로 변경 */
+    width: 175px; height: 50px; 
+    border: none; padding: 0 30px;
+    background-color: #0957c3;
+    color: #fff; text-align: left;
+}
+.counseling button::after{
+    position: absolute; top: 13px; right: 25px;
+    width: 56px; height: 24px;
+    background-image: url(../images/main/more_btn_sprite.png);
+    background-repeat: no-repeat;
+    background-position: -56px 0;
+    content: '';
+}

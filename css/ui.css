@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+@import url(popup.css);
+@import url(header.css);
+@import url(main.css);
+@import url(introduce.css);
+@import url(business.css);
+@import url(promote.css);
+@import url(recruit.css);
+@import url(field.css);
+@import url(cs.css);
+@import url(footer.css);
+
+
+
+/* title */
+h2{
+    height: 50px; line-height: 50px;
+    font-family: 'GmarketSans'; font-weight: 700; 
+    font-size: 50px; color: #333;
+}
+
+/* titleEffect */
+h2.titleEffect{
+    position: relative; /* 현재 위치에서 상대적 이동 */
+    top: 100px; /* 아래로 100px이동 */
+    opacity: 0; /* 처음엔 안보이게 처리 */
+
+    transition: 0.5s ease-out;
+}
+h2.titleEffect.active{
+    top: 0; /* 원래 위치로 돌아오기 */
+    opacity: 1; /* 보이게 처리 */
+}
+
+
+/* innerWrap - 컨텐츠 최소사이즈를 홈페이지 가운데 오게 한번 더 묶는 요소 */
+.innerWrap{
+    width: 1180px; margin: 0 auto; /* 블록요소를 부모영역에서 가로 가운데 오게 처리 */
+}

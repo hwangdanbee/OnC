@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+/* field */
+#field{
+    width: 1180px; height: 800px; padding: 120px 0; /* 앞상하 뒷좌우 */
+    margin: 0 auto;
+}
+#field h2{
+    text-align: center; margin-bottom: 60px;
+}
+#field .swiper{
+    width: 100%; height: 450px;
+}
+/* swiper에서는 이전다음버튼이 글자로 들어가서 안보이게 처리 */
+#field .swiper-button-next::after, #field .swiper-button-prev::after{ display: none; }
+#field .swiper-button-next, #field .swiper-button-prev{
+    width: 50px; height: 50px;
+    background-color: #333;
+    background-image: url(../images/main/slider_btn_sprite.png);
+    background-repeat: no-repeat;
+}
+#field .swiper-button-next{ 
+    right: 0; top: 0; 
+    margin-top: 0; /* 가운데 오기 위해 계산되어 있어서 0으로 변경 */
+    background-position: -50px 0; 
+}
+#field .swiper-button-prev{ 
+    left: auto; /* 들어가 있는 수치를 기본값으로 변경 */
+    right: 50px; 
+    top: 0; 
+    margin-top: 0; /* 가운데 오기 위해 계산되어 있어서 0으로 변경 */
+}
+#field .swiper-button-next:hover{
+    background-color: #ff9a3c;
+    background-position: -150px 0;
+}
+#field .swiper-button-prev:hover{
+    background-color: #ff9a3c;
+    background-position: -100px 0;
+}
+#field .swiper-button-line{ /* 이전다음버튼 가운데 선처리 */
+    position: absolute; top: 10px; right: 50px;
+    z-index: 15;
+    width: 1px; height: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+#field .swiper-slide{
+    position: relative; /* a태그의 앱솔루트 기준을 현재 요소로 변경 */
+    width: 1180px; height: 450px;
+}
+#field figure{
+    position: relative; /* figcaption의 앱솔루트 기준을 현재 요소로 변경 */
+    width: 100%; height: 100%; /* 부모영역상속 */
+}
+#field figcaption{
+    position: absolute; right: 0;
+    top: 0; bottom: 0; margin: auto 0; /* 위아래 위치가 자동 처리 */
+    width: 520px; height: 260px;
+    border: 1px solid #eeeeee; padding: 49px;
+    background-color: #fff;
+}
+#field .type{ /* span태그가 인라인이여서 높이주려고 처리 */
+    display: inline-block; height: 20px; margin-right: 5px;
+    border: 1px solid #666; padding: 0 10px; /* 앞상하 뒷좌우 */
+    line-height: 18px;
+}
+#field h3{
+    width: 100%; height: 50px;
+    color: #0957c3; font-size: 20px; line-height: 50px;
+
+    /* 한줄 텍스트 글자줄임 */
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+#field p{
+    width: 100%; height: 90px; 
+    color: #333; font-size: 16px; line-height: 30px; text-align: justify; /* 양쪽 정렬 */
+
+    /* 여러 줄 글자줄임 */
+    overflow: hidden; display: -webkit-box;
+    -webkit-box-orient: vertical; -webkit-line-clamp: 3; /* ... 처리할 줄수 지정 */
+}
+#field .swiper-slide > a{ /* 외부 플러그인이 a태그는 자동생성하는 경우가 많아서 혹시 몰라 정확히 선택 */
+    position: absolute; bottom: 0; right: 175px;
+    width: 170px; height: 50px; 
+    border: 1px solid #0957c3; padding: 0 19px;
+    background-color: #fff;
+    color: #0957c3; font-size: 18px; font-weight: 700; line-height: 48px;
+}
+#field .swiper-slide > a::after{
+    position: absolute; right: 13px; top: 0; bottom: 0;
+    width: 56px; height: 24px; margin: auto 0;
+    background-image: url(../images/main/more_btn_sprite.png);
+    background-repeat: no-repeat;
+    content: '';
+}
+#field .swiper-slide > a:hover{
+    background-color: #0957c3; color: #fff;
+}
+#field .swiper-slide > a:hover::after{ background-position: -56px 0; }
